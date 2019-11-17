@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员登录</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+
+    <style>
+    body{
+
+    }
+    #container{
+        display: -webkit-box;
+        display: -moz-box;
+        margin: 0 auto;
+    }
+    #container1{
+       padding-top: 200px;
+        padding-left: 200px;
+        padding-bottom: 100px;
+        padding-right: 200px;
+        border: 0.2em solid;
+        box-shadow: 7px 7px 5px rgba(34,10,10,0.6)
+
+    }
+    #main
+    {
+        opacity: 0.4;
+        width: 800px;
+        padding-right: 50px;
+        background-color: whitesmoke;
+    }
+    #left
+    {
+        background-color: #d3d9df;
+        opacity: 0.3;
+        width: 40%;
+        height: 600px;
+    }
+    .font{
+        font-family: 华文彩云;
+        font-size:35px;
+        color:#942a25 ;
+        padding-top: 200px;
+        padding-left: 70px;
+        padding-right: 40px;
+    }
+    #header
+    {
+        padding: 20px;
+        background:linear-gradient(#1f6377,#5bc0de);
+        background-repeat: no-repeat;
+    }
+
+    label{
+        color: #0e0e0e;
+        font-size: 18px;
+    }
+
+</style>
+    <script>
+        $.validator.setDefaults({
+            submitHandler: function() {
+                alert("提交事件!");
+            }
+        });
+        $().ready(function() {
+            $("#commentForm").validate();
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="header"></div>
+<div style="padding: 2px"></div>
+<div id="container">
+<div id="left"><p class="font">Brandi后台管理系统</p></div>
+    <div style="padding: 2px"></div>
+<div id="main">
+    <div style="padding: 80px">
+        <div id="container1"><!--中间注册页面部分-->
+    <fieldset >
+    <form  method="post"><!--post 向服务器传输数据-->
+        <label>用户名：</label>
+        <input name="name" minlength="2" type="text" maxlength="12" required>
+        <br>
+        <label>密码：</label>
+        <input name="password" minlength="6" type="password" maxlength="12" required>
+        <br>
+        <label>验证码：</label>
+        <input name="vcode" type="text">
+        <br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="submit" type="submit" value="登录">
+&nbsp;       &nbsp;&nbsp;&nbsp;&nbsp;
+        <input  name="submit" accesskey="l"
+                value="取消" tabindex="4" type="submit">
+    </form>
+    </fieldset>
+
+</div>
+</div>
+</div>
+    </div>
+</div>
+</body>
+</html>
